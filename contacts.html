@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} - Vibe Cafe{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background Image -->
+<div style="position: relative; height: 300px; background-image: url('/static/contact.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-bottom: 2rem;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4);"></div>
+    <div style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <h1 style="color: white; font-size: 3rem; text-align: center; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Contact Us</h1>
+    </div>
+</div>
+
+<div class="contact-wrapper" style="max-width: 700px; margin: 2rem auto; padding: 1rem;">
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">We'd love to hear from you! Reach out with questions, feedback, or just to say hi.</p>
+    
+    <section style="margin-bottom: 2rem;">
+        <h2 style="color: #6f4e37; border-bottom: 2px solid #6f4e37; padding-bottom: 0.5rem;">Team Contacts</h2>
+        <ul style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="margin-bottom: 0.5rem;"><strong>Aditya:</strong> <a href="tel:+916371027810" style="color: #6f4e37; text-decoration: none;">+91 63710 27810</a></li>
+            <li style="margin-bottom: 0.5rem;"><strong>Ansuman:</strong> <a href="tel:+918260717789" style="color: #6f4e37; text-decoration: none;">+91 82607 17789</a></li>
+            <li style="margin-bottom: 0.5rem;"><strong>Pragnya:</strong> <a href="tel:+917077877652" style="color: #6f4e37; text-decoration: none;">+91 70778 77652</a></li>
+            <li style="margin-bottom: 0.5rem;"><strong>Hritesh:</strong> <a href="tel:+919439964150" style="color: #6f4e37; text-decoration: none;">+91 94399 64150</a></li>
+            <li style="margin-bottom: 0.5rem;"><strong>Saransh:</strong> <a href="tel:+918249479239" style="color: #6f4e37; text-decoration: none;">+91 82494 79239</a></li>
+        </ul>
+    </section>
+    
+    <section style="margin-bottom: 2rem;">
+        <h2 style="color: #6f4e37; border-bottom: 2px solid #6f4e37; padding-bottom: 0.5rem;">Quick Info</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+            <p><strong>Working Hours:</strong><br>Open daily, 7:00 AM – 10:00 PM</p>
+            <p><strong>Fast Response:</strong><br>Replies in under 30 minutes</p>
+            <p><strong>Partnerships:</strong><br>Contact Saransh for collaborations</p>
+            <p><strong>Event Bookings:</strong><br>Call Pragnya for reservations</p>
+        </div>
+    </section>
+    
+    <section>
+        <h2 style="color: #6f4e37; border-bottom: 2px solid #6f4e37; padding-bottom: 0.5rem;">Send Us a Message</h2>
+        <form method="POST" action="/contact" style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 1rem;">
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required 
+                       style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; box-sizing: border-box;" />
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required 
+                       style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; box-sizing: border-box;" />
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required 
+                          style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; resize: vertical; box-sizing: border-box;"></textarea>
+            </div>
+            
+            <button type="submit" style="background-color: #6f4e37; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: background-color 0.3s;" 
+                    onmouseover="this.style.backgroundColor='#5a3e2b'" 
+                    onmouseout="this.style.backgroundColor='#6f4e37'">
+                Send Message
+            </button>
+        </form>
+    </section>
+</div>
+{% endblock %}
